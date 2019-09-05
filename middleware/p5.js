@@ -1,7 +1,7 @@
 import p5 from "p5";
 
 function runner(p5) {
-  const HEIGHT = 100;
+  const HEIGHT =  100;
   const WIDTH = p5.windowWidth;
   const SIZE = HEIGHT / 2;
   const LETTERS = "MONETA";
@@ -38,6 +38,13 @@ function runner(p5) {
       }
       char.x += char.vx;
       char.y += char.vy;
+
+      if (char.x < -50 || WIDTH + 50 < char.x + SIZE) {
+        char.x = WIDTH / 2;
+      }
+      if (char.y < -50 || HEIGHT + 50 < char.y) {
+        char.y = HEIGHT / 2;
+      }
 
       p5.colorMode(p5.HSB, 100);
       p5.fill(char.color, 20, 100);
