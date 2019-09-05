@@ -5,16 +5,15 @@ import pluralize from "pluralize";
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
-    apiKey: "AIzaSyBp0VVzKXpkPOkG7AKLBjiQ4ON41LfJIPk",
-    authDomain: "checkit-56f02.firebaseapp.com",
-    databaseURL: "https://checkit-56f02.firebaseio.com",
-    projectId: "checkit-56f02",
-    storageBucket: "checkit-56f02.appspot.com",
-    messagingSenderId: "959432634799",
-    appId: "1:959432634799:web:007a9c89f69ad0f2",
+    apiKey: "AIzaSyDXEdgDM7sxK1MSp0gyzuoyo08PMyDyr88",
+    authDomain: "moneta-e4f2a.firebaseapp.com",
+    databaseURL: "https://moneta-e4f2a.firebaseio.com",
+    projectId: "moneta-e4f2a",
+    storageBucket: "",
+    messagingSenderId: "251368168453",
+    appId: "1:251368168453:web:52eab046e781596aa4d06c",
   });
 }
-
 
 export const db = firebase.firestore();
 

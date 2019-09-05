@@ -1,5 +1,8 @@
 // 振込処理用データストア
 
+var date = new Date();
+var day = date.getDay();　//日曜~土曜を0~6にして返す
+
 export const state = () => ({
   bankId: null,
   branchId: null,
@@ -18,7 +21,7 @@ export const getters = {
     rootGetters["branches/branch"](getters.branchId),
   account: (state, getters, rootState, rootGetters) =>
     rootGetters["accounts/account"](getters.accountId),
-  fee: state => (state.amount > 30000 ? 432 : 216), // 30,000を超える振込は手数料432円、以下は216円
+  fee: state => (day ==　4 ? 432 : 216), // 木曜日のみ振込は手数料432円、以外は216円
 };
 
 export const mutations = {
